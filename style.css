@@ -1,0 +1,132 @@
+:root {
+  --main-color: #2196f3;
+  --secondary-color: #009688;
+  --p-color: #333;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.game {
+  background-color: #eee;
+  height: 100vh;
+}
+.game .name {
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.game .container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 0 15px;
+}
+.game .container > div {
+  background-color: #fff;
+  color: var(--p-color);
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+.game div.message p {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 4px;
+}
+.game div.start {
+  background-color: #008789;
+  color: #fff;
+  cursor: pointer;
+}
+.game div.the-word,
+.game div.finish {
+  background-color: transparent;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-size: 60px;
+  padding: 0;
+  user-select: none !important;
+}
+.game input {
+  color: var(--p-color);
+  width: 100%;
+  padding: 7px;
+  font-size: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  caret-color: var(--main-color);
+  margin-bottom: 20px;
+}
+.game input:focus {
+  outline: none;
+}
+.game div.upcoming-words {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.game div.upcoming-words p {
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  user-select: none !important;
+}
+.game div.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.game div.finish {
+  margin: 0;
+  font-size: 50px;
+}
+.game div.finish.bad {
+  color: red;
+}
+.game div.again {
+  position: absolute;
+  background-color: #008789;
+  color: #fff;
+  border-radius: 5px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none !important;
+}
+
+@media (max-width: 767px) {
+  .game .name {
+    font-size: 20px;
+  }
+  .game div.control {
+    font-size: 13px;
+    padding: 15px 7px;
+  }
+}
